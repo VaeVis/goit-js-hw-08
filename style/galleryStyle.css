@@ -1,0 +1,54 @@
+/* 
+<li class="gallery-item">
+  <a class="gallery-link" href="large-image.jpg">
+    <img
+      class="gallery-image"
+      src="small-image.jpg"
+      data-source="large-image.jpg"
+      alt="Image description"
+    />
+  </a>
+</li> */
+* { 
+    margin: 0; 
+    padding: 0; 
+} 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.bodyClass {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto;
+    
+}
+.gallery img {
+   width: 360px;
+   
+}
+
+.gallery img:hover {
+    cursor: url('/bxs_hand-down.svg'), auto;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
