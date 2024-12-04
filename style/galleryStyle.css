@@ -1,14 +1,4 @@
-/* 
-<li class="gallery-item">
-  <a class="gallery-link" href="large-image.jpg">
-    <img
-      class="gallery-image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
-    />
-  </a>
-</li> */
+
 * { 
     margin: 0; 
     padding: 0; 
@@ -40,7 +30,7 @@
 }
 
 .gallery img:hover {
-    cursor: url('/bxs_hand-down.svg'), auto;
+    cursor: url('/svg/bxs_hand-down.svg'), auto;
 }
 
 #lightbox {
