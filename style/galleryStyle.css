@@ -30,7 +30,7 @@
 }
 
 .gallery img:hover {
-    cursor: url('./svg/bxs_hand-down.svg'), auto;
+    cursor: url('../svg/bxs_hand-down.svg'), auto;
 }
 
 #lightbox {
