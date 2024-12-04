@@ -59,13 +59,14 @@ class Gallery {
             event.preventDefault();
             console.log('test');
         
-        const linkElem = event.target.closest('.gallery-link');
-        if(!linkElem) return;
+        const imgElem = event.target.closest('.gallery-image');
+        if(!imgElem) return;
         
-        const src = linkElem.href;
-        const description = linkElem.querySelector('img').alt;
+        const src = imgElem.dataset.source;
+        const description = imgElem.alt;
 
-        // .open({ src, description });
+        const modal = new Modal();
+        modal.open({ src, description });
 
         });
     }
@@ -81,9 +82,8 @@ class Gallery {
       // Otwieranie okna modalnego
       open({ src, description }) {
         const modalContent = `
-          <div id="lightbox" style="text-align: center;">
-            <img src="${src}" alt="${description}" style="max-width: 90%; max-height: 90%;" />
-            <p>${description}</p>
+          <div id="lightbox">
+            <img src="${src}" alt="${description}"/>
           </div>
         `;
     
@@ -117,6 +117,7 @@ class Gallery {
       }
     }
 
+ 
 
 const images = [
     {
